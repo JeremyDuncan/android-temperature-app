@@ -7,12 +7,62 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/tempChoose"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
 
+    <RadioGroup
+        android:id="@+id/tempGroup"
+        android:layout_width="251dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/btnDegF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degFah" />
+
+        <RadioButton
+            android:id="@+id/btnDegC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degCel" />
+
+        <RadioButton
+            android:id="@+id/btnDegK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degKel" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="REMOVE TEXT"
+        app:layout_constraintStart_toStartOf="@+id/btnConvert"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvert" />
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:text="Convert"
+        app:layout_constraintStart_toStartOf="@+id/tempGroup"
+        app:layout_constraintTop_toBottomOf="@+id/tempGroup" />
 </androidx.constraintlayout.widget.ConstraintLayout>
