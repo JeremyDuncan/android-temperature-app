@@ -4,4 +4,5 @@
     <string name="degFah">Degrees Fahrenheit</string>
     <string name="degCel">Degrees Celsius</string>
     <string name="degKel">Degrees Kelvin</string>
+    <string name="enterTemp">Please enter the temperature anf select the correct units and then press Convert:</string>
 </resources>
