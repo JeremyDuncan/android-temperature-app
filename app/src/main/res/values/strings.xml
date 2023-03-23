@@ -1,8 +1,18 @@
 <resources>
-    <string name="app_name">Temperature App</string>
+    <string name="app_name">My First Android App</string>
     <string name="tempChoose">Choose Your Temperature</string>
     <string name="degFah">Degrees Fahrenheit</string>
     <string name="degCel">Degrees Celsius</string>
     <string name="degKel">Degrees Kelvin</string>
     <string name="enterTemp">Please enter the temperature anf select the correct units and then press Convert:</string>
+
+    <string name="Welcome">Welcome to Jeremy Duncan\'s App</string>
+    <string name="goWeather">Convert\nTemp</string>
+    <string name="goTicTacToe">Tic Tac Toe</string>
+    <string name="goInfo">Info</string>
+    <string name="goMusic">Favorite\nSong</string>
+    <string name="goTakePic">Take\nPicture</string>
+    <string name="goDraw">My\nDrawing</string>
+    <string name="mainMenu">Main Menu</string>
+    <string name="exit">Exit</string>
 </resources>

@@ -2,8 +2,9 @@ package com.example.introandroidapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,7 +14,7 @@ import android.widget.TextView;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, OnClickListener {
+public class WeatherActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, OnClickListener {
 
 
 //    @override
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_weather);
         RadioGroup tempGroup = (RadioGroup) findViewById(R.id.tempGroup);
         tempGroup.setOnCheckedChangeListener(this);
         btnConvert =(Button)  findViewById(R.id.btnConvert);
@@ -114,6 +115,22 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             case R.id.btnDegK:
                 lblOutput.setText("You chose Kelvin");
                 break;
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        switch(item.getItemId()) {
+            case R.id.mnuMain:
+                startActivity(new Intent(getApplicationContext(), MainMenuActivity.class));
+                return true;
+            case R.id.mnuExit:
+                finish();
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }
