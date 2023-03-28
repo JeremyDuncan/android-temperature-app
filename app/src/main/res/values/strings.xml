@@ -15,4 +15,7 @@
     <string name="goDraw">My\nDrawing</string>
     <string name="mainMenu">Main Menu</string>
     <string name="exit">Exit</string>
+
+    <string name="message_label">Player X\'s Turn</string>
+    <string name="new_game_button">New Game</string>
 </resources>
