@@ -32,6 +32,17 @@ public class MainMenuActivity extends AppCompatActivity {
                                           }
                                       }
         );
+
+        Button btnTicTacToe=(Button) findViewById(R.id.btnTicTacToe);
+        btnTicTacToe.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View v) {
+                                           goTicTacToe();
+                                       }
+                                   }
+        );
+
+
     }
 
     private void goWeather() {
@@ -43,5 +54,8 @@ public class MainMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MainMenuActivity.this, MyDrawing.class);
         this.startActivity(intent);
     }
-
+    private void goTicTacToe() {
+        Intent intent = new Intent(MainMenuActivity.this, TicTacToeActivity.class);
+        this.startActivity(intent);
+    }
 }
