@@ -130,7 +130,7 @@ public class TicTacToeActivity extends AppCompatActivity implements OnClickListe
         // Diagonal 1 ==============================================================================
         if (!gameGrid[0][0].getText().equals(" ") &&
                 gameGrid[0][0].getText().equals(gameGrid[1][1].getText()) &&
-                gameGrid[1][1].getText().equals(gameGrid[2][2])
+                gameGrid[1][1].getText().equals(gameGrid[2][2].getText())
         ) {
             message = gameGrid[0][0].getText() + " wins!";
             gameOver = true;
@@ -140,12 +140,14 @@ public class TicTacToeActivity extends AppCompatActivity implements OnClickListe
         // Diagonal 2 ==============================================================================
         if (!gameGrid[2][0].getText().equals(" ") &&
                 gameGrid[2][0].getText().equals(gameGrid[1][1].getText()) &&
-                gameGrid[0][2].getText().equals(gameGrid[1][1].getText())
+                gameGrid[1][1].getText().equals(gameGrid[0][2].getText())
         ) {
             message = gameGrid[2][0].getText() + " wins!";
             gameOver = true;
             return;
         }
+
+        // TIE =====================================================================================
         if (turn > 9) {
             message = "It's a tie!";
             gameOver = true;
