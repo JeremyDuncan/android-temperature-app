@@ -42,6 +42,15 @@ public class MainMenuActivity extends AppCompatActivity {
                                    }
         );
 
+        Button btnInfo=(Button) findViewById(R.id.btnInfo);
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View v) {
+                                           goInfo();
+                                       }
+                                   }
+        );
+
 
     }
 
@@ -58,4 +67,10 @@ public class MainMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MainMenuActivity.this, TicTacToeActivity.class);
         this.startActivity(intent);
     }
+
+    private void goInfo() {
+        Intent intent = new Intent(MainMenuActivity.this, InformationPageActivity.class);
+        this.startActivity(intent);
+    }
+
 }
