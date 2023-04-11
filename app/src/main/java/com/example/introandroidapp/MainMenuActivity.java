@@ -51,7 +51,23 @@ public class MainMenuActivity extends AppCompatActivity {
                                    }
         );
 
+        Button btnTakePic=(Button) findViewById(R.id.btnTakePic);
+        btnTakePic.setOnClickListener(new View.OnClickListener() {
+                                          @Override
+                                          public void onClick(View v) {
+                                              goTakePic();
+                                          }
+                                      }
+        );
 
+        Button btnFavSong=(Button) findViewById(R.id.btnSong);
+        btnFavSong.setOnClickListener(new View.OnClickListener() {
+                                          @Override
+                                          public void onClick(View v) {
+                                              goSong();
+                                          }
+                                      }
+        );
     }
 
     private void goWeather() {
@@ -72,5 +88,12 @@ public class MainMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MainMenuActivity.this, InformationPageActivity.class);
         this.startActivity(intent);
     }
-
+    private void goSong() {
+        Intent intent = new Intent(MainMenuActivity.this, SongActivity.class);
+        this.startActivity(intent);
+    }
+    private void goTakePic() {
+        Intent intent = new Intent(MainMenuActivity.this, TakePictureActivity.class);
+        this.startActivity(intent);
+    }
 }

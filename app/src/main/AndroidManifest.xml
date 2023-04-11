@@ -12,6 +12,14 @@
         android:theme="@style/Theme.IntroAndroidApp"
         tools:targetApi="31">
         <activity
+            android:name=".TakePictureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SongActivity"
+            android:label="@string/song_activity"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
             android:name=".InformationResultsActivity"
             android:exported="false" />
         <activity
